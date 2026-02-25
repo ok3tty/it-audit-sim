@@ -35,7 +35,8 @@ NGINX
 └─────────────────────────────────────────────────────┘
 ```
 > All Containers run on a docker bridge network on kali linux.
-> Ports are intentionally misoncfigured to simulate a real-world audit target.
+> Ports are intentionally misconfigured to simulate a real-world audit target.
+
 ## Audit Methodology
 This project applies the NIST Cybersecurity Framework (CSF), which structures security assessments across five core functions: Identify, Protect, Detect, Respond, and Recover.
 A Docker-based mock environment was built to simulate a real corporate infrastructure, allowing each function to be tested against intentionally misconfigured systems that reflect common real-world vulnerabilities.<br>
