@@ -1,4 +1,5 @@
 ## IT AUDIT Simulation and Report
+Author: Abdulmuizz Wahab
 
 ## Software Technologies used
 Docker,
@@ -48,7 +49,43 @@ Recover — A review is conducted to determine whether a disaster recovery and b
 
 
 ## Key Finidngs
+-- Weak Database Credentials (Critical -- risk)
+  ![MySQL weak Credentials](findings/ProtectFunction.png)
+  
+-- Open Port Detection (High -- risk)
+  ![Port Scan nmap](findings/identifyFunction.png)
+  ![Port Scan script](findings/portscan.png)
 
-  ## 1. Weak Passwords
+-- No Encryption at Rest (Critical -- risk)
+  ![Encryption Cech](findings/ProtectFunct.png)
+  
 ## How to Run
+  -- Software Need:
+    -- Kali Linux (or any Debian-based Linux)
+    -- Python 3 installed 
+    -- git installed 
+
+  1. Clone Repo
+    -- git clone https://github.com/ok3tty/it-audit-sim.git
+    -- cd it-audit-sim
+
+2. Install Docker if not already installed
+   -- sudo apt update && sudo apt install -y docker.io docker-compose
+   -- sudo systemctl enable docker && sudo systemctl start docker
+   -- sudo usermod -aG docker $USER
+   -- newgrp docker
+3. Launch the mock environment
+   -- cd environment
+   -- docker-compose up -d
+   -- docker ps   # verify all 3 containers are running
+4. Run the port scanner
+   -- python3 scripts/port_scanner.py
+5. Run the risk scorer
+   -- python3 scripts/risk_scorer.py
+6. before exit make sure to shut down docker environment
+   -- cd environment
+   -- docker-compose down
+   
 ## Sample:
+  -- Risk Report Output
+    ![Risk Report](findings/risk_report.json)
