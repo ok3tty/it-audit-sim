@@ -1,0 +1,8 @@
+NIST Function,Control ID,Control Description,Test Performed,Result,Risk Level,Finding
+Identify,ID.AM-1,Inventory of hardware/software,docker ps + netstat,PASS,Low,None 
+Protect,PR.AC-1,Identity management enforced,Checked SSH config,FAIL,High,Default credentials active
+Protect,PR.DS-1,Data at rest protected,Checked MysQL encryption,FAIL,Critical,No encryption configured
+Detect,DE.CM-1,Network monitoring active,Reviewed logs,FAIL,High,NO IDS/IPS deployed
+Respond,RS.RP-1,Response plan exists,Policy Review,FAIL,Medium,No incident response plan
+Recover,RC.RP-1,Recovery plan exists,Policy Review,FAIL,Medium,No backup or DR plan
+

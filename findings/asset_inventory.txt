@@ -1,0 +1,17 @@
+NAMES               IMAGE                               PORTS
+audit_webserver     nginx:latest                        0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+audit_database      mysql:8.0                           0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp
+audit_workstation   linuxserver/openssh-server:latest   0.0.0.0:2222->2222/tcp, :::2222->2222/tcp
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-02-25 00:21 CST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000096s latency).
+Other addresses for localhost (not scanned): ::1
+
+PORT     STATE  SERVICE    VERSION
+80/tcp   closed http
+2222/tcp open   tcpwrapped
+3306/tcp open   mysql      MySQL 8.0.45
+8080/tcp open   http       nginx 1.29.5
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.28 seconds

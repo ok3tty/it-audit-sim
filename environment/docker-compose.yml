@@ -1,0 +1,25 @@
+services:
+  webserver:
+    image: nginx:latest
+    container_name: audit_webserver
+    ports:
+      - '8080:80'
+  database:
+    image: mysql:8.0
+    container_name: audit_database
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: corpdata
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '3306:3306'
+  workstation:
+    image: linuxserver/openssh-server:latest
+    container_name: audit_workstation
+    environment:
+      - PASSWORD_ACCESS=true
+      - USER_PASSWORD=password123
+      - USER_NAME=testuser
+      - SUDO_ACCESS=true
+    ports:
+      - '2222:2222'

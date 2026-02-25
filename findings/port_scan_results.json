@@ -1,0 +1,20 @@
+{
+  "scan_data": "2026-02-25 01:13:22.938293",
+  "assets": {
+    "webserver": {
+      "open_ports": [
+        8080
+      ]
+    },
+    "database": {
+      "open_ports": [
+        3306
+      ]
+    },
+    "workstation": {
+      "open_ports": [
+        2222
+      ]
+    }
+  }
+}

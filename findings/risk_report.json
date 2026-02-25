@@ -1,0 +1,40 @@
+{
+  "total_score": 14,
+  "findings": [
+    {
+      "control": "PR.AC-1",
+      "description": "Identity management enforced",
+      "risk": "High",
+      "finding": "Default credentials active",
+      "score": 3
+    },
+    {
+      "control": "PR.DS-1",
+      "description": "Data at rest protected",
+      "risk": "Critical",
+      "finding": "No encryption configured",
+      "score": 4
+    },
+    {
+      "control": "DE.CM-1",
+      "description": "Network monitoring active",
+      "risk": "High",
+      "finding": "NO IDS/IPS deployed",
+      "score": 3
+    },
+    {
+      "control": "RS.RP-1",
+      "description": "Response plan exists",
+      "risk": "Medium",
+      "finding": "No incident response plan",
+      "score": 2
+    },
+    {
+      "control": "RC.RP-1",
+      "description": "Recovery plan exists",
+      "risk": "Medium",
+      "finding": "No backup or DR plan",
+      "score": 2
+    }
+  ]
+}
